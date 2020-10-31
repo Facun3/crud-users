@@ -6,12 +6,16 @@
     <title>Listado de contactos</title>
 </head>
 <body>
-    <table>
+    <table border="1px">
         <thead>
             <tr>
                 <th>Nombre</th>
                 <th>Apellido</th>
                 <th>Correo</th>
+                <th>DNI</th>
+                <th>Domicilio</th>
+                <th>Fecha Nac</th>
+                <th>Alta Sistema</th>
             </tr>
         </thead>
         <tbody>
@@ -20,6 +24,11 @@
                 <td>{{persona.nombre}}</td>
                 <td>{{persona.apellido}}</td>
                 <td>{{persona.correo}}</td>
+                <td>{{persona.dni}}</td>
+                <td>{{persona.domicilio}}</td>
+                <td>{{persona.nac}}</td>
+                <td>{{persona.alta_sistema}}</td>
+
             </tr>
             {% endfor %}
         </tbody>
