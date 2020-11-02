@@ -18,5 +18,5 @@ from django.urls import path
 from aplicaciones.principal.views import inicio
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', inicio, name = 'index')
+    path('', include('aplicaciones.urls')),
 ]
