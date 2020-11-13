@@ -1,7 +1,8 @@
 from django.urls import path 
 from . import views
-from .models import Post
+from .models import Persona
+from aplicaciones.principal.views import crearusuario,inicio
 urlpatterns = [
-    path('', views.inicio, name='inicio'),
-    path('post/new/',),
+    path('', inicio, name='inicio'),
+    path('new/', crearusuario, name='crear_usuario'),
 ]

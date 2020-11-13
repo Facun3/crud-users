@@ -3,19 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Listado de contactos</title>
+    <title>{% block title %}Listado de contactos{% endblock title%}</title>
 </head>
 <body>
+    <h2>Listado</h2>
+    {%block body%}
     <table border="1px">
         <thead>
             <tr>
                 <th>Nombre</th>
                 <th>Apellido</th>
-                <th>Correo</th>
-                <th>DNI</th>
-                <th>Domicilio</th>
-                <th>Fecha Nac</th>
-                <th>Alta Sistema</th>
             </tr>
         </thead>
         <tbody>
@@ -23,19 +20,12 @@
             <tr>
                 <td>{{persona.nombre}}</td>
                 <td>{{persona.apellido}}</td>
-                <td>{{persona.correo}}</td>
-                <td>{{persona.dni}}</td>
-                <td>{{persona.domicilio}}</td>
-                <td>{{persona.nac}}</td>
-                <td>{{persona.alta_sistema}}</td>
-
             </tr>
             {% endfor %}
         </tbody>
     </table>
-    <form action='crearusuario' method='GET'>
-        <button type='submit'> Agregar usuario</button>
-    </form>
-        
+        <a href="{% url 'crear_usuario' %}"> <button type='button'>Agregar</button></a>
+
+    {%endblock body%}
 </body>
 </html>
